@@ -1,32 +1,33 @@
-import {Page, NavController, NavParams} from 'ionic-angular';
+import {Page, NavController} from 'ionic-angular';
+import {WorkshopService} from '../services/WorkshopService';
+import {WorkshopDetailsPage} from '../workshop-details/workshop-details';
 
 
 @Page({
-  templateUrl: 'build/pages/workshops/workshops.html'
+  templateUrl: 'build/pages/workshops/workshops.html',
+  providers: [WorkshopService]
 })
+
 export class WorkshopsPage {
   static get parameters() {
-    return [[NavController], [NavParams]];
+    return [[NavController], [WorkshopService]];
   }
 
-  constructor(nav, navParams) {
+  constructor(nav, workshopService) {
     this.nav = nav;
+    this.year = 2016;  // TODO: Buscar como cambiar el año
+    this.workshopService = workshopService;
+  }
 
-    // If we navigated to this page, we will have an item available as a nav param
-    this.selectedItem = navParams.get('workshop');
-
-    this.workshops = [];
-    for(let i = 1; i < 5; i++) {
-      this.workshops.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,        
-      });
-    }
+  ngOnInit(){
+    this.workshopService.list(this.year).subscribe(
+      data => {this.workshops = data; console.log(this.workshops);},
+      err => {console.log(err)},
+      () => console.log('Carga completada')
+    );
   }
 
   itemTapped(event, workshop) {
-    this.nav.push(WorkshopsPage, {
-      workshop: workshop
-    })
+    this.nav.push(WorkshopDetailsPage, {workshop: workshop});
   }
 }

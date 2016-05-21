@@ -8,13 +8,13 @@
 <ion-content>
   <ion-list>
     <button ion-item *ngFor="let workshop of workshops" (click)="itemTapped($event, workshop)">
-      {{workshop.title}}
+      {{ workshop.title }}
       <div class="item-note" item-right>
-        {{workshop.note}}
+        {{ workshop.teacher }}
       </div>
     </button>
   </ion-list>
   <div *ngIf="selectedItem" padding>
-    <b>{{selectedItem.title}}</b>
+    <b>{{ selectedItem.title }}</b>
   </div>
 </ion-content>

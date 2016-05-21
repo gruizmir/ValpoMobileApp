@@ -2,9 +2,33 @@
   <button menuToggle>
     <ion-icon name="menu"></ion-icon>
   </button>
-  <ion-title>Nombre</ion-title>
+  <ion-title>{{ speaker.name }} {{ speaker.lastname }}</ion-title>
 </ion-navbar>
 
 
 <ion-content padding class="common speaker-detail">
+  <div *ngIf="speaker" class="selection">
+    <ion-card>
+      <ion-item>
+        <ion-avatar item-left image-large>
+          <img src="{{ speaker.profile_picture }}"/>
+        </ion-avatar>
+        <ion-item-content class="speaker-title-data">
+          <h1>{{ speaker.occupation }}</h1>
+          <p>Día {{ speaker.day }} - {{ speaker.start_time }}</p>
+        </ion-item-content>
+      </ion-item>
+ 
+      <ion-item>
+        <icon document item-left></icon>
+        <h2>{{ speaker.title }}</h2>
+        <p class="item-description">{{ speaker.descrption }}</p>
+      </ion-item>
+      <ion-item>
+        <icon bookmark item-left></icon>
+        <p><a href="https://twitter.com/{{ speaker.twitter }}">@{{ speaker.twitter}}</a></p>
+        <p *ngIf="speaker.linkedin"><a href="{{ speaker.linkedin }}">Linkedin</a></p>
+      </ion-item>    
+    </ion-card>
+  </div>
 </ion-content>

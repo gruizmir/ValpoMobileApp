@@ -7,4 +7,11 @@
 
 
 <ion-content padding class="common speakers">
+  <ion-item *ngFor="let speaker of speakers" (click)="itemTapped($event, speaker)"> 
+    <ion-avatar item-left>
+      <img class="speaker-img" src="{{ speaker.profile_picture }}"/>
+    </ion-avatar>
+    <h2>{{ speaker.title }}</h2>
+    <p class="item-description">{{ speaker.name }} {{ speaker.lastname }}</p>
+  </ion-item>
 </ion-content>
