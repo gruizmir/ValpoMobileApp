@@ -1,8 +1,14 @@
 import {ViewChild} from '@angular/core';
 import {App, Platform} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
-import {GettingStartedPage} from './pages/getting-started/getting-started';
-import {ListPage} from './pages/list/list';
+import {WorkshopsPage} from './pages/workshops/workshops';
+import {SpeakersPage} from './pages/speakers/speakers';
+import {SponsorsPage} from './pages/sponsors/sponsors';
+import {HackathonPage} from './pages/hackathon/hackathon';
+import {UpdatesPage} from './pages/updates/updates';
+import {WorkshopDetailsPage} from './pages/workshop-details/workshop-details';
+import {SpeakerDetailsPage} from './pages/speaker-details/speaker-details';
+import {HackteamDetailsPage} from './pages/hackteam-details/hackteam-details';
 
 
 @App({
@@ -22,13 +28,15 @@ class MyApp {
 
     this.initializeApp();
 
-    // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Getting Started', component: GettingStartedPage },
-      { title: 'List', component: ListPage }
+      { title: 'VMC al día', component: UpdatesPage },
+      { title: 'Expositores', component: SpeakersPage },
+      { title: 'Talleres', component: WorkshopsPage },
+      { title: 'Hackathon', component: HackathonPage },
+      { title: 'Patrocinadores', component: SponsorsPage }
     ];
 
-    this.rootPage = GettingStartedPage;
+    this.rootPage = UpdatesPage;
   }
 
   initializeApp() {
