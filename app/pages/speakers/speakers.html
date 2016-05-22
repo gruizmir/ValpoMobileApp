@@ -6,12 +6,22 @@
 </ion-navbar>
 
 
-<ion-content padding class="common speakers">
-  <ion-item *ngFor="let speaker of speakers" (click)="itemTapped($event, speaker)"> 
+<ion-content padding class="common sponsors">
+    <ion-card *ngFor="let speaker of speakers" (click)="itemTapped($event, speaker)">
+      <img src="{{ formatURL(speaker.profile_picture) }}"/>
+      <ion-card-content>
+        <ion-card-title>{{ speaker.title }}</ion-card-title>
+        <p>{{ speaker.name }} {{ speaker.lastname }}</p>
+        <p>Día {{ speaker.day }} - {{speaker.start_time}}</p>
+      </ion-card-content>
+    </ion-card>
+
+
+    <ion-item *ngFor="let speaker of speakers" > 
     <ion-avatar item-left>
-      <img class="speaker-img" src="{{ speaker.profile_picture }}"/>
+      <img class="speaker-img" src="{{formatURL(speaker.profile_picture)}}"/>
     </ion-avatar>
-    <h2>{{ speaker.title }}</h2>
+    <p>{{ speaker.title }}</p>
     <p class="item-description">{{ speaker.name }} {{ speaker.lastname }}</p>
   </ion-item>
 </ion-content>

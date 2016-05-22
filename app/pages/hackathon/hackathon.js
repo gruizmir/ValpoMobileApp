@@ -1,6 +1,7 @@
 import {Page, NavController} from 'ionic-angular';
 import {HackathonService} from '../services/HackathonService';
 import {HackteamDetailsPage} from '../hackteam-details/hackteam-details';
+import {SERVER_URL, DEFAULT_YEAR} from '../services/config';
 
 @Page({
   templateUrl: 'build/pages/hackathon/hackathon.html',
@@ -13,20 +14,32 @@ export class HackathonPage {
   }
 
   constructor(nav, hackathonService) {
-  	this.year = 2016;  // Buscar como cambiar el año
+  	this.year = DEFAULT_YEAR;  // Buscar como cambiar el año
   	this.nav = nav;
   	this.hackathonService = hackathonService;
   }
 
   ngOnInit(){
   	this.hackathonService.list(this.year).subscribe(
-  		data => {this.sponsors = data; console.log(this.sponsors);},
+  		data => {this.hackteams = data;},
   		err => {console.log(err)},
   		() => console.log('Carga completada')
 	);
   }
 
   itemTapped(event, sponsor){
-	this.nav.push(HackteamDetailsPage, {sponsor: sponsor});
+	  this.nav.push(HackteamDetailsPage, {sponsor: sponsor});
+  }
+
+  formatURL(url){
+    if (url == null || !url){
+      return '';
+    }
+    else if (!url.startsWith('http://') && !url.startsWith('https://') ){
+      return SERVER_URL + url;
+    }
+    else {
+      return url;
+    }
   }
 }

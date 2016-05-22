@@ -7,4 +7,10 @@
 
 
 <ion-content padding class="common sponsors">
+    <ion-card *ngFor="let sponsor of sponsors">
+      <img src="{{ formatURL(sponsor.logo) }}"/>
+      <ion-card-content>
+        <ion-card-title>{{ sponsor.name }}</ion-card-title>
+      </ion-card-content>
+    </ion-card>
 </ion-content>

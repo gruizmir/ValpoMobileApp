@@ -15,7 +15,7 @@ export class UpdateService {
 	list(year){
 		// TODO: Buscar forma de dejar url de api como valor de proyecto
 		var url = API_URL + 'updates/?year=' + year;
-		this.response = this.http.get(url).map(res => res.json());
-		return this.response;
+		this.data = this.http.get(url).map(res => res.json());
+		return this.data;
 	}
 }

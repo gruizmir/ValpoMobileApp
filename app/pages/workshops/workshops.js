@@ -1,6 +1,7 @@
 import {Page, NavController} from 'ionic-angular';
 import {WorkshopService} from '../services/WorkshopService';
 import {WorkshopDetailsPage} from '../workshop-details/workshop-details';
+import {SERVER_URL, DEFAULT_YEAR} from '../services/config';
 
 
 @Page({
@@ -15,7 +16,7 @@ export class WorkshopsPage {
 
   constructor(nav, workshopService) {
     this.nav = nav;
-    this.year = 2016;  // TODO: Buscar como cambiar el año
+    this.year = DEFAULT_YEAR;  // TODO: Buscar como cambiar el año
     this.workshopService = workshopService;
   }
 
@@ -29,5 +30,17 @@ export class WorkshopsPage {
 
   itemTapped(event, workshop) {
     this.nav.push(WorkshopDetailsPage, {workshop: workshop});
+  }
+
+  formatURL(url){
+    if (url == null || !url){
+      return '';
+    }
+    else if (!url.startsWith('http://') && !url.startsWith('https://') ){
+      return SERVER_URL + url;
+    }
+    else {
+      return url;
+    }
   }
 }

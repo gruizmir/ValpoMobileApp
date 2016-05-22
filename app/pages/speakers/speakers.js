@@ -1,6 +1,7 @@
 import {Page, NavController} from 'ionic-angular';
 import {SpeakerService} from '../services/SpeakerService';
 import {SpeakerDetailPage} from '../speaker-details/speaker-details';
+import {SERVER_URL, DEFAULT_YEAR} from '../services/config';
 
 
 @Page({
@@ -15,7 +16,7 @@ export class SpeakersPage {
 
   constructor(nav, speakerService) {
   	this.nav = nav;
-  	this.year = 2016;  // TODO: Buscar como cambiar el año
+  	this.year = DEFAULT_YEAR;  // TODO: Buscar como cambiar el año
   	this.speakerService = speakerService;
   }
 
@@ -29,5 +30,17 @@ export class SpeakersPage {
 
   itemTapped(event, speaker){
 	this.nav.push(SpeakerDetailPage, {speaker: speaker});
+  }
+
+  formatURL(url){
+  	if (url == null || !url){
+      return '';
+    }
+    else if (!url.startsWith('http://') && !url.startsWith('https://') ){
+  		return SERVER_URL + url;
+  	}
+  	else {
+  		return url;
+  	}
   }
 }

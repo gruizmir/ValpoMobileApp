@@ -18,9 +18,7 @@ export class WorkshopService {
 	list(year){
 		// TODO: Buscar forma de dejar url de api como valor de proyecto
 		var url = API_URL + 'workshops/?year=' + year;
-		var response = this.http.get(url);
-		console.log(response);
-		this.response = response.map(res => res.json());
-		return this.response;
+		this.data = this.http.get(url).map(res => res.json());
+		return this.data;
 	}
 }

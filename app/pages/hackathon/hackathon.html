@@ -7,11 +7,16 @@
 
 
 <ion-content padding class="common hackathon">
-  <ion-item *ngFor="let hackteam of hackteams" (click)="itemTapped($event, hackteam)"> 
-    <ion-avatar item-left>
-      <img class="hackteam-img" src="{{ hackteam.profile_picture }}"/>
-    </ion-avatar>
-    <h2>{{ hackteam.name }}</h2>
-    <p class="item-description">Líder: {{ hackteam.leader }}</p>
-  </ion-item>
+  <ion-card *ngFor="let hackteam of hackteams" (click)="itemTapped($event, hackteam)">
+    <ion-item>
+      <ion-card-title>{{ hackteam.name }}</ion-card-title>
+    </ion-item>
+    <img src="{{ formatURL(hackteam.team_picture) }}"/>
+    <ion-card-content>
+      <ion-item>
+        <h2 item>Líder: {{ hackteam.leader }}</h2>
+        <p>{{ hackteam.project_description }}</p>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

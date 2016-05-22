@@ -37,6 +37,7 @@ class MyApp {
     ];
 
     this.rootPage = UpdatesPage;
+    //this.rootPage = SponsorsPage;
   }
 
   initializeApp() {
