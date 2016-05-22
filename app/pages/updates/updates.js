@@ -19,6 +19,14 @@ export class UpdatesPage {
     this.updateService = updateService;
   }
 
+  ngOnInit(){
+    this.updateService.list(this.year).subscribe(
+      data => {this.updates = data;},
+      err => {console.log(err)},
+      () => console.log('Carga completada')
+    );
+  }
+
   formatURL(url){
   	if (url == null || !url){
       return '';

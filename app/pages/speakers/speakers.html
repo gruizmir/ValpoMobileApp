@@ -7,6 +7,7 @@
 
 
 <ion-content padding class="common sponsors">
+<!--
     <ion-card *ngFor="let speaker of speakers" (click)="itemTapped($event, speaker)">
       <img src="{{ formatURL(speaker.profile_picture) }}"/>
       <ion-card-content>
@@ -15,13 +16,14 @@
         <p>Día {{ speaker.day }} - {{speaker.start_time}}</p>
       </ion-card-content>
     </ion-card>
+-->
 
-
-    <ion-item *ngFor="let speaker of speakers" > 
+  <ion-item text-wrap *ngFor="let speaker of speakers"> 
     <ion-avatar item-left>
-      <img class="speaker-img" src="{{formatURL(speaker.profile_picture)}}"/>
+      <img class="speaker-img" src="{{ formatURL(speaker.profile_picture) }}"/>
     </ion-avatar>
-    <p>{{ speaker.title }}</p>
-    <p class="item-description">{{ speaker.name }} {{ speaker.lastname }}</p>
+    <h3 class="item-description">{{ speaker.title }}</h3>
+    <p>{{ speaker.name }} {{ speaker.lastname }}</p>
+    <p>Día {{ speaker.day }} - {{ speaker.start_time }}</p>
   </ion-item>
 </ion-content>

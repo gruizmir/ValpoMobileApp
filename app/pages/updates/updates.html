@@ -7,4 +7,14 @@
 
 
 <ion-content padding class="common updates">
+  <ion-card *ngFor="let update of updates" (click)="itemTapped($event, update)">
+    <img src="{{ formatURL(update.image) }}"/>
+    <ion-card-content>
+      <ion-card-title>{{ update.title }}</ion-card-title>
+      <ion-item text-wrap>
+        <h3 item>{{ update.updated_time }}</h3>
+        <p>{{ update.description }}</p>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
