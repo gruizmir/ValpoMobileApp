@@ -15,4 +15,16 @@ export class SpeakerDetailsPage {
   	this.speaker = navParams.get('speaker');
   	console.log(this.speaker);
   }
+
+  formatURL(url){
+    if (url == null || !url){
+      return '';
+    }
+    else if (!url.startsWith('http://') && !url.startsWith('https://') ){
+      return SERVER_URL + url;
+    }
+    else {
+      return url;
+    }
+  }
 }

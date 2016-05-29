@@ -7,23 +7,24 @@
 
 
 <ion-content padding class="common sponsors">
-<!--
-    <ion-card *ngFor="let speaker of speakers" (click)="itemTapped($event, speaker)">
+
+<!--     <ion-card *ngFor="let speaker of speakers" (click)="itemTapped($event, speaker)">
       <img src="{{ formatURL(speaker.profile_picture) }}"/>
       <ion-card-content>
         <ion-card-title>{{ speaker.title }}</ion-card-title>
         <p>{{ speaker.name }} {{ speaker.lastname }}</p>
         <p>Día {{ speaker.day }} - {{speaker.start_time}}</p>
       </ion-card-content>
-    </ion-card>
--->
+    </ion-card> -->
 
-  <ion-item text-wrap *ngFor="let speaker of speakers"> 
-    <ion-avatar item-left>
-      <img class="speaker-img" src="{{ formatURL(speaker.profile_picture) }}"/>
-    </ion-avatar>
-    <h3 class="item-description">{{ speaker.title }}</h3>
-    <p>{{ speaker.name }} {{ speaker.lastname }}</p>
-    <p>Día {{ speaker.day }} - {{ speaker.start_time }}</p>
-  </ion-item>
+  <ion-list>
+    <ion-item text-wrap *ngFor="let speaker of speakers" (click)="itemSelected(speaker)"> 
+      <ion-avatar item-left>
+        <img class="speaker-img" src="{{ formatURL(speaker.profile_picture) }}"/>
+      </ion-avatar>
+      <h3 class="item-description">{{ speaker.title }}</h3>
+      <p>{{ speaker.name }} {{ speaker.lastname }}</p>
+      <p>Día {{ speaker.day }} - {{ speaker.start_time }}</p>
+    </ion-item>
+  </ion-list>
 </ion-content>

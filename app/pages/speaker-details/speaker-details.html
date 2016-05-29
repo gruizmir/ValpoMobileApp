@@ -9,26 +9,33 @@
 <ion-content padding class="common speaker-detail">
   <div *ngIf="speaker" class="selection">
     <ion-card>
-      <ion-item>
-        <ion-avatar item-left image-large>
-          <img src="{{ speaker.profile_picture }}"/>
-        </ion-avatar>
-        <ion-item-content class="speaker-title-data">
-          <h1>{{ speaker.occupation }}</h1>
-          <p>Día {{ speaker.day }} - {{ speaker.start_time }}</p>
-        </ion-item-content>
-      </ion-item>
- 
-      <ion-item>
-        <icon document item-left></icon>
-        <h2>{{ speaker.title }}</h2>
-        <p class="item-description">{{ speaker.descrption }}</p>
-      </ion-item>
-      <ion-item>
-        <icon bookmark item-left></icon>
-        <p><a href="https://twitter.com/{{ speaker.twitter }}">@{{ speaker.twitter}}</a></p>
-        <p *ngIf="speaker.linkedin"><a href="{{ speaker.linkedin }}">Linkedin</a></p>
-      </ion-item>    
+      <img src="{{ formatURL(speaker.profile_picture) }}"/>
+      <ion-card-content>
+        <ion-card-title>{{ speaker.title }}</ion-card-title>
+        <ion-item text-wrap>
+          <h3 item class="speaker-occupation">{{ speaker.occupation }}</h3>
+          <p>Día {{ speaker.day }} - {{speaker.start_time}}</p>
+        </ion-item>
+        <ion-item text-wrap>
+          <h2 item>{{ speaker.title }}</h2>
+          <p item class="item-description">{{ speaker.description }}</p>
+        </ion-item>
+        <ion-item>
+          <icon bookmark item-left></icon>
+          <p>
+            <ion-icon name="twitter"></ion-icon> 
+            <a href="https://twitter.com/{{ speaker.twitter }}">
+              <button>Twitter: @{{ speaker.twitter}}</button></a>
+            <br>
+          </p>
+
+          <p *ngIf="speaker.linkedin">
+            <ion-icon name="linkedin"></ion-icon>
+            <a href="{{ speaker.linkedin }}">
+              <button>Linkedin</button></a>
+          </p>
+        </ion-item>    
+      </ion-card-content>
     </ion-card>
   </div>
 </ion-content>

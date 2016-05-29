@@ -36,7 +36,7 @@ class MyApp {
       { title: 'Patrocinadores', component: SponsorsPage }
     ];
 
-    this.rootPage = UpdatesPage;
+    this.rootPage = SpeakersPage;
     //this.rootPage = SponsorsPage;
   }
 

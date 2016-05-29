@@ -1,6 +1,6 @@
 import {Page, NavController} from 'ionic-angular';
 import {SpeakerService} from '../services/SpeakerService';
-import {SpeakerDetailPage} from '../speaker-details/speaker-details';
+import {SpeakerDetailsPage} from '../speaker-details/speaker-details';
 import {SERVER_URL, DEFAULT_YEAR} from '../services/config';
 
 
@@ -28,8 +28,8 @@ export class SpeakersPage {
 	);
   }
 
-  itemTapped(event, speaker){
-	this.nav.push(SpeakerDetailPage, {speaker: speaker});
+  itemSelected(speaker){
+    this.nav.push(SpeakerDetailsPage, {speaker: speaker});
   }
 
   formatURL(url){
