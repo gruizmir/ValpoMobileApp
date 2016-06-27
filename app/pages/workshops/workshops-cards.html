@@ -6,7 +6,7 @@
 </ion-navbar>
 
 <ion-content>
-  <ion-card *ngFor="let workshop of workshops" (click)="itemTapped($event, workshop)">
+  <ion-card *ngFor="let workshop of workshops" (click)="itemTapped(workshop)">
     <img src="{{ formatURL(workshop.image) }}"/>
     <ion-card-content>
       <ion-card-title>{{ workshop.title }}</ion-card-title>

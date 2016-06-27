@@ -13,7 +13,7 @@
       <ion-card-title>{{ update.title }}</ion-card-title>
       <ion-item text-wrap>
         <h3 item>{{ update.updated_time }}</h3>
-        <p>{{ update.description }}</p>
+        <div [innerHTML]="update.description"></div>
       </ion-item>
     </ion-card-content>
   </ion-card>

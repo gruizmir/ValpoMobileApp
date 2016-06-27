@@ -5,7 +5,7 @@ import {SERVER_URL, DEFAULT_YEAR} from '../services/config';
 
 
 @Page({
-  templateUrl: 'build/pages/workshops/workshops.html',
+  templateUrl: 'build/pages/workshops/workshops-cards.html',
   providers: [WorkshopService]
 })
 
@@ -28,7 +28,7 @@ export class WorkshopsPage {
     );
   }
 
-  itemTapped(event, workshop) {
+  itemTapped(workshop) {
     this.nav.push(WorkshopDetailsPage, {workshop: workshop});
   }
 

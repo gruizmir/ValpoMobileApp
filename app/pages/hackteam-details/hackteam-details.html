@@ -2,9 +2,32 @@
   <button menuToggle>
     <ion-icon name="menu"></ion-icon>
   </button>
-  <ion-title>Nombre</ion-title>
+  <ion-title>Detalles del Equipo</ion-title>
 </ion-navbar>
 
 
-<ion-content padding class="common hackteam">
+<ion-content padding class="common team">
+  <div *ngIf="team" class="selection">
+    <ion-card>
+      <img src="{{ formatURL(team.team_picture) }}"/>
+      <ion-card-content>
+        <ion-card-title>{{ team.name }}</ion-card-title>
+        <ion-item text-wrap>
+          <h3 item class="team-occupation">Líder: {{ team.leader }}</h3>
+        </ion-item>
+        <ion-item text-wrap>
+          <h2 item>Descripción de la App</h2>
+          <p item class="item-description">{{ team.project_description }}</p>
+        </ion-item>
+        <ion-item text-wrap>
+          <h2 item>Equipo</h2>
+          <ul>
+            <li *ngIf="team.person2">{{ team.person2 }}</li>
+            <li *ngIf="team.person3">{{ team.person3 }}</li>
+            <li *ngIf="team.person4">{{ team.person4 }}</li>
+          </ul>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>

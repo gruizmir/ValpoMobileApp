@@ -1,0 +1,456 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"desc",
+				"description"
+			],
+			[
+				"work",
+				"workshop"
+			],
+			[
+				"spo",
+				"sponsor"
+			],
+			[
+				"spea",
+				"speaker"
+			],
+			[
+				"wopr",
+				"workshops"
+			],
+			[
+				"worksh",
+				"workshop"
+			],
+			[
+				"Work",
+				"workshops"
+			],
+			[
+				"we",
+				"web_url"
+			],
+			[
+				"te",
+				"team"
+			],
+			[
+				"Haca",
+				"HackTeams"
+			],
+			[
+				"Works",
+				"workshops"
+			],
+			[
+				"ap",
+				"api_url"
+			],
+			[
+				"create",
+				"createProject"
+			],
+			[
+				"pro",
+				"projectTitle"
+			],
+			[
+				"prj",
+				"projectTitle"
+			],
+			[
+				"pr",
+				"prompt"
+			],
+			[
+				"funcio",
+				"function"
+			],
+			[
+				"to",
+				"toggleLeft"
+			],
+			[
+				"ioni",
+				"ionicSideMenuDelegate"
+			],
+			[
+				"tas",
+				"taskModal"
+			],
+			[
+				"active",
+				"activeProject"
+			],
+			[
+				"Pro",
+				"projectTitle"
+			],
+			[
+				"project",
+				"projectTitle"
+			],
+			[
+				"Proje",
+				"project"
+			],
+			[
+				"pre",
+				"projectTitle"
+			],
+			[
+				"last",
+				"lastActiveIndex"
+			],
+			[
+				"local",
+				"localStorage"
+			],
+			[
+				"ion",
+				"ion-list"
+			],
+			[
+				"ionic",
+				"ionicModal"
+			],
+			[
+				"ti",
+				"title"
+			],
+			[
+				"hi",
+				"Hide"
+			],
+			[
+				"task",
+				"taskModal"
+			],
+			[
+				"io",
+				"ion-content"
+			],
+			[
+				"ion-",
+				"ion-header-bar"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/pages/services/config.js",
+			"settings":
+			{
+				"buffer_size": 363,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/pages/services/SpeakerService.js",
+			"settings":
+			{
+				"buffer_size": 3356,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/app.js",
+			"settings":
+			{
+				"buffer_size": 1740,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/gabriel/Proyectos/ValpoMobileApp",
+		"/home/gabriel/Proyectos/ValpoMobileApp/app",
+		"/home/gabriel/Proyectos/ValpoMobileApp/app/pages",
+		"/home/gabriel/Proyectos/ValpoMobileApp/app/pages/services",
+		"/home/gabriel/Proyectos/ValpoMobileApp/www",
+		"/home/gabriel/Proyectos/ValpoMobileApp/www/build"
+	],
+	"file_history":
+	[
+		"/home/gabriel/Proyectos/VMCApp/www/index.html",
+		"/home/gabriel/Proyectos/VMCApp/www/templates/speaker.html",
+		"/home/gabriel/Proyectos/VMCApp/www/templates/workshops.html",
+		"/home/gabriel/Proyectos/VMCApp/www/js/controllers.js",
+		"/home/gabriel/Proyectos/VMCApp/www/js/app.js",
+		"/home/gabriel/Proyectos/VMCApp/www/templates/workshop.html",
+		"/home/gabriel/Proyectos/VMCApp/www/templates/speakers.html",
+		"/home/gabriel/Proyectos/VMCApp/www/templates/sponsors.html",
+		"/home/gabriel/Proyectos/VMCApp/www/templates/menu.html",
+		"/home/gabriel/Proyectos/VMCApp/www/templates/hackathon.html",
+		"/home/gabriel/Proyectos/VMCApp/www/templates/hackteam.html",
+		"/home/gabriel/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/gabriel/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/gabriel/Proyectos/todo/config.xml",
+		"/home/gabriel/Proyectos/todo/www/index.html",
+		"/home/gabriel/Proyectos/todo/www/js/app.js",
+		"/home/gabriel/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/gabriel/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"Sponsor.",
+			"title",
+			"header",
+			"    <",
+			" Line",
+			".Line",
+			"header",
+			"dark",
+			"e>\n      <ion-header-bar class=\"bar-stable\">\n        <h1 class=\"title\">Ionic Blank Starter</h1>\n      </ion-header-bar>\n      <ion-content>\n      </ion-content>\n    </ion-p",
+			"line",
+			">        ",
+			"\n        ",
+			"        \n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			">        "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/pages/services/config.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 363,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								362,
+								362
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/pages/services/SpeakerService.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3356,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1704,
+								1704
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1036.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1740,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1740,
+								1740
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 372.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "valpomobileapp.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 277.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

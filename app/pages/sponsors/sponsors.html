@@ -6,11 +6,8 @@
 </ion-navbar>
 
 
-<ion-content padding class="common sponsors">
-    <ion-card *ngFor="let sponsor of sponsors">
-      <img src="{{ formatURL(sponsor.logo) }}"/>
-      <ion-card-content>
-        <ion-card-title>{{ sponsor.name }}</ion-card-title>
-      </ion-card-content>
-    </ion-card>
+<ion-content padding class="common card-background-page">
+  <ion-card *ngFor="let sponsor of sponsors" >
+    <a href="{{ sponsor.url }}"><img src="{{ formatURL(sponsor.logo) }}"/></a>
+   </ion-card>
 </ion-content>

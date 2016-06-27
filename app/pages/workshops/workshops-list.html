@@ -1,0 +1,20 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Talleres</ion-title>
+</ion-navbar>
+
+
+<ion-content padding class="common sponsors">
+  <ion-list>
+    <ion-item text-wrap *ngFor="let workshop of workshops" (click)="itemTapped(workshop)"> 
+      <ion-avatar item-left>
+        <img class="workshop-img" src="{{ formatURL(workshop.profile_picture) }}"/>
+      </ion-avatar>
+      <h3 class="item-description">{{ workshop.title }}</h3>
+      <p>{{ workshop.name }} {{ workshop.lastname }}</p>
+      <p>Día {{ workshop.day }} - {{ workshop.start_time }}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

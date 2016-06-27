@@ -1,0 +1,20 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Hackathon - Equipos</ion-title>
+</ion-navbar>
+
+
+<ion-content padding class="common hackteams">
+  <ion-list>
+    <ion-item text-wrap *ngFor="let team of hackteams" (click)="itemTapped(team)"> 
+      <h3 class="item-description">{{ team.name }}</h3>
+      <p><b>{{ team.leader }}</b>
+        <span *ngIf="team.person2"> - {{ team.person2 }}</span>
+        <span *ngIf="team.person3"> - {{ team.person3 }}</span>
+        <span *ngIf="team.person4"> - {{ team.person4 }}</span>
+      </p>
+    </ion-item>
+  </ion-list>
+</ion-content>

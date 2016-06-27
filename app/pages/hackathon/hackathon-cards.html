@@ -1,0 +1,16 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Hackathon - Equipos </ion-title>
+</ion-navbar>
+
+
+<ion-content padding class="common hackathon">
+  <ion-card *ngFor="let team of hackteams" (click)="itemTapped(team)">
+    <img src="{{ formatURL(team.team_picture) }}"/>
+    <ion-card-content>
+      <h2 item>{{ team.name }}</h2>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

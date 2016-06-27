@@ -2,21 +2,11 @@
   <button menuToggle>
     <ion-icon name="menu"></ion-icon>
   </button>
+
   <ion-title>Expositores</ion-title>
 </ion-navbar>
 
-
-<ion-content padding class="common sponsors">
-
-<!--     <ion-card *ngFor="let speaker of speakers" (click)="itemTapped($event, speaker)">
-      <img src="{{ formatURL(speaker.profile_picture) }}"/>
-      <ion-card-content>
-        <ion-card-title>{{ speaker.title }}</ion-card-title>
-        <p>{{ speaker.name }} {{ speaker.lastname }}</p>
-        <p>Día {{ speaker.day }} - {{speaker.start_time}}</p>
-      </ion-card-content>
-    </ion-card> -->
-
+<ion-content>
   <ion-list>
     <ion-item text-wrap *ngFor="let speaker of speakers" (click)="itemSelected(speaker)"> 
       <ion-avatar item-left>

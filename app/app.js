@@ -37,7 +37,6 @@ class MyApp {
     ];
 
     this.rootPage = SpeakersPage;
-    //this.rootPage = SponsorsPage;
   }
 
   initializeApp() {

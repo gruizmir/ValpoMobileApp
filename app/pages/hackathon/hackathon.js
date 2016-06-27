@@ -4,7 +4,7 @@ import {HackteamDetailsPage} from '../hackteam-details/hackteam-details';
 import {SERVER_URL, DEFAULT_YEAR} from '../services/config';
 
 @Page({
-  templateUrl: 'build/pages/hackathon/hackathon.html',
+  templateUrl: 'build/pages/hackathon/hackathon-cards.html',
   providers: [HackathonService]
 })
 
@@ -24,11 +24,12 @@ export class HackathonPage {
   		data => {this.hackteams = data;},
   		err => {console.log(err)},
   		() => console.log('Carga completada')
-	);
+	  );
   }
 
-  itemTapped(event, sponsor){
-	  this.nav.push(HackteamDetailsPage, {sponsor: sponsor});
+  itemTapped(team){
+    console.log(team.name);
+	  this.nav.push(HackteamDetailsPage, {team: team});
   }
 
   formatURL(url){

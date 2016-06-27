@@ -13,7 +13,6 @@ export class SpeakerDetailsPage {
   constructor(app, nav, navParams) {
   	this.nav = nav;
   	this.speaker = navParams.get('speaker');
-  	console.log(this.speaker);
   }
 
   formatURL(url){

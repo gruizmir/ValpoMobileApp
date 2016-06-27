@@ -2,9 +2,38 @@
   <button menuToggle>
     <ion-icon name="menu"></ion-icon>
   </button>
-  <ion-title>Nombre</ion-title>
+  <ion-title>Taller VMC</ion-title>
 </ion-navbar>
 
 
-<ion-content padding class="common workshop-details">
+<ion-content padding class="common workshop-detail">
+  <div *ngIf="workshop" class="selection">
+    <ion-card>
+      <img src="{{ formatURL(workshop.profile_picture) }}"/>
+      <ion-card-content>
+        <ion-card-title>{{ workshop.title }}</ion-card-title>
+        <ion-item text-wrap>
+          <p>Día {{ workshop.day }} - {{workshop.start_time}}</p>
+        </ion-item>
+        <ion-item text-wrap>
+          <p class="item-description">{{ workshop.description }}</p>
+        </ion-item>
+        <ion-item>
+          <icon bookmark item-left></icon>
+          <p>
+            <ion-icon name="twitter"></ion-icon> 
+            <a href="https://twitter.com/{{ workshop.twitter }}">
+              <button>Twitter: @{{ workshop.twitter}}</button></a>
+            <br>
+          </p>
+
+          <p *ngIf="workshop.linkedin">
+            <ion-icon name="linkedin"></ion-icon>
+            <a href="{{ workshop.linkedin }}">
+              <button>Linkedin</button></a>
+          </p>
+        </ion-item>    
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
